@@ -1,0 +1,228 @@
+body, h1, h2, h3, p {
+margin: 0;
+padding: 0;
+}
+
+body {
+font-weight: bold;
+ background-color: gold;
+}
+
+.container {
+ display: grid;
+ grid-template-columns: repeat(4, 1fr);
+grid-template-rows: auto;
+ grid-template-areas:
+        "nav nav nav nav"
+        "header header header header"
+        "persona papers hobbies books"
+        "blog blog blog blog"
+        "footer footer footer footer";
+grid-gap: 10px;
+ padding: 20px;
+}
+
+.container > * {
+    grid-column: span 4;
+}
+
+#home img {
+max-width: 100%;
+height: auto;
+ display: block;
+margin: 0 auto;
+}
+
+h1, h2, h3 {
+text-align: center;
+font-size: 37px;
+}
+
+nav ul {
+display: flex;
+justify-content: space-between;
+padding: 0;
+}
+
+nav li {
+display: inline;
+margin-right: 10px;
+}
+
+nav a {
+color: blue;
+}
+
+header {
+font-style: oblique;
+ font-size: xx-large;
+background-color: lightgreen;
+ color: white;
+padding: 20px 0;
+}
+
+#publications-container {
+background-color: lightgreen;
+}
+
+.publications-grid {
+ display: grid;
+grid-template-columns: repeat(4, 1fr);
+ gap: 20px;
+}
+
+.publication {
+background-color: whitesmoke;
+border: 1px;
+ padding: 10px;
+}
+
+.publication h3 {
+font-size: 20px;
+margin-bottom: 5px;
+}
+
+.publication p {
+font-size: 14px;
+color: gray;
+margin-bottom: 10px;
+}
+
+.about-content {
+display: flex;
+align-items: center;
+ background-color: lightgray;
+}
+
+.about-photo {
+max-width: 50%;
+padding: 20px;
+}
+
+.about-photo img {
+max-width: 100%;
+height: auto;
+}
+
+.about-text {
+flex-grow: 1;
+padding: 20px;
+font-size: 18px;
+}
+
+#hobbies {
+background-color: burlywood;
+padding: 20px;
+}
+
+#hobbies p {
+font-size: 18px;
+}
+
+#gallery {
+background-color: darkkhaki;
+padding: 20px;
+}
+
+.gallery-row {
+display: flex;
+justify-content: flex-start;
+ margin-bottom: 10px;
+}
+
+.gallery-photo {
+background-color: white;
+border: 1px white;
+padding: 10px;
+ text-align: center;
+ flex: 1;
+margin-right: 10px;
+}
+
+.gallery-photo:last-child {
+margin-right: 0;
+}
+
+.gallery-photo img {
+max-width: 250px;
+ height: 250px;
+display: block;
+ margin: 0 auto;
+}
+
+#blog {
+background-color: wheat;
+padding: 20px;
+}
+
+.blog-grid {
+display: grid;
+grid-template-columns: 1fr 1fr;
+ gap: 20px;
+align-items: center;
+}
+
+.blog-image {
+background-color: wheat;
+border: 1px white;
+ padding: 10px;
+}
+
+.blog-image img {
+max-width: 100%;
+height: auto;
+display: block;
+margin: 0;
+}
+
+.blog-text {
+background-color: white;
+border: 1px white;
+padding: 10px;
+text-align: left;
+}
+
+#about {
+ background-color: lightgray;
+}
+
+#publications {
+background-color: lightgreen;
+}
+
+footer {
+ background-color: lightgray;
+ padding: 20px;
+}
+
+@media (max-width: 500px) {
+h1, h2, h3 {
+font-size: 24px;
+}
+/*mobile version*/
+.publications-grid {
+grid-template-columns: 1fr;
+ }
+
+header {
+ font-size: large;
+padding: 10px 0;
+}
+
+ .gallery-row {
+ flex-direction: column;
+}
+
+#gallery {
+grid-template-columns: 1fr;
+}
+
+.gallery-photo img {
+width: 100%;
+height: auto;
+}
+
+.blog-grid {
+grid-template-columns: 1fr;
+}
+}
